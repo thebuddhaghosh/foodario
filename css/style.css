@@ -1,0 +1,292 @@
+/* =====================================================
+   DESIGN SYSTEM
+===================================================== */
+@import url('./global.css');
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+.sections-heading.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sections-heading .view-all {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.sections-heading .view-all:hover {
+  background-color: var(--color-gold);
+  color: #fff;
+}
+/* =====================================================
+RATINGS
+===================================================== */
+
+.ratings {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 6px;
+}
+.ratings i,
+.ratings span {
+  font-size: 12px;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--color-gold);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+.hero-section {
+  background: linear-gradient(45deg, rgb(255 255 255 / 84%), rgb(255 255 255 / 17%)), url(../images/hero-banner.jpg) center / cover no-repeat;
+  min-height: 80vh;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-title span {
+  color: var(--color-gold);
+}
+
+.hero-text {
+  max-width: 480px;
+  margin: 20px 0;
+}
+
+.hero-badge {
+  background: var(--color-gold-soft);
+  color: #000;
+}
+
+/* =====================================================
+   PRODUCT CARDS
+===================================================== */
+.product-card {
+  padding: 10px;
+}
+
+.product-card .product-thumb {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 3 / 4;
+  margin-bottom: 18px;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.product-card img {
+  width: 100%;
+  margin-bottom: 12px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card h6 {
+  margin-bottom: 5px;
+}
+
+/* =====================================================
+   CART & CHECKOUT CARDS
+===================================================== */
+.checkout-card {
+  background: var(--color-bg-card);
+  padding: 25px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* =====================================================
+   CART ITEMS
+===================================================== */
+.cart-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.cart-item img {
+  border-radius: var(--radius-sm);
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-control button {
+  border: none;
+  background: #eee;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.qty-control button:hover {
+  background: var(--color-gold);
+  color: #000;
+}
+
+/* =====================================================
+   CHECKOUT STEPS
+===================================================== */
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.checkout-steps .step {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.checkout-steps .step.active {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.step-content {
+  display: none;
+}
+
+.step-content.active {
+  display: block;
+}
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-row.total {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   FORMS
+===================================================== */
+.form-control {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: var(--color-gold);
+  box-shadow: none;
+}
+
+/* =====================================================
+   STRIPE
+===================================================== */
+.stripe-box {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 50px 0;
+}
+
+.footer small {
+  color: var(--color-text-light);
+}
+
+/* =====================================================
+  CATEGORIES
+===================================================== */
+.categories-section .product-card {
+  position: relative;
+  padding: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.categories-section .product-card img {
+  z-index: 0;
+  position: relative;
+}
+.categories-section .product-card .floating-labels {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9;
+  color: #fff;
+}
+.categories-section .product-card .floating-labels h6 {
+  font-size: 1.3rem;
+}
+
+/* =====================================================
+   EMPTY STATES
+===================================================== */
+.empty-cart {
+  padding: 40px 0;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
